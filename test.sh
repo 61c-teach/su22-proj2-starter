@@ -39,6 +39,9 @@ if [ -z "${1:-}" ]; then
 fi
 
 case "${1}" in
+  download_tools)
+    "${python_exec}" tools/download_tools.py ${@:2}
+    ;;
   all)
     "${python_exec}" -m unittest unittests.py -v
     ;;
