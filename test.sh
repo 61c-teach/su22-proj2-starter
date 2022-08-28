@@ -40,7 +40,7 @@ fi
 
 case "${1}" in
   download_tools)
-    "${python_exec}" tools/download_tools.py ${@:2}
+    bash tools/download_tools.sh venus
     ;;
   all)
     "${python_exec}" -m unittest unittests.py -v
